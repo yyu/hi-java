@@ -40,6 +40,11 @@ public class Main {
         }
 
         Map<String, Integer> colorMap = new HashMap<>();
+        colorMap.put("red", 0);
+        colorMap.put("blue", 0);
+        colorMap.put("green", 0);
+        colorMap.put("yellow", 0);
+        colorMap.put("brown", 0);
         for (Marker marker : markers) {
             colorMap.putIfAbsent(marker.color, 0);
             colorMap.put(marker.color, colorMap.get(marker.color) + 1);
