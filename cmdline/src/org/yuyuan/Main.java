@@ -20,7 +20,7 @@ public class Main {
 
         List<Marker> markers = new ArrayList<>();
 
-        for (int i = 0; i < 1000000000; i++) {
+        for (int i = 0; i < 10; i++) {
             Marker newMarker = new Marker();
 
             double d = Math.random();
