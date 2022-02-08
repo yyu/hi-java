@@ -85,3 +85,38 @@ $ java Main
 blah
 5
 ```
+
+```
+$ tree
+.
+├── Main.java
+└── sub
+    └── subsub
+        └── Foo.java
+
+2 directories, 2 files
+$ vimcat sub/subsub/Foo.java 
+package sub.subsub;
+
+public class Foo {
+    public static int add(int i, int j) {
+        return i + j;
+    }
+}
+
+$ vimcat Main.java 
+import sub.subsub.Foo;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("blah");
+        System.out.println(Foo.add(2, 3));
+    }
+}
+
+$ javac sub/subsub/Foo.java
+$ javac Main.java 
+$ java Main
+blah
+5
+```
